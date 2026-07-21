@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://yavilagarzon.github.io/info-clases/ -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información General - SENA CMM 2026</title>
+    <style>
+    /* =========================================
+   VARIABLES DE TEMA (AZUL, VERDE Y VINOTINTO)
+   ========================================= */
+
+/* Tema Azul (Electrónica Analógica / LTspice) - POR DEFECTO */
+:root {
+    --bg-gradient-start: #102a43;
+    --bg-gradient-end: #243b55;
+    --title-accent: #9fb3c8;
+    --badge-bg: rgba(255,255,255,0.1);
+    --badge-border: rgba(255,255,255,0.2);
+    --slide-bg: #f4f6f9;
+    --header-text: #102a43;
+    --header-border: #334e68;
+    --header-number: #829ab1;
+    --text-main: #243b55;
+    --link-color: #334e68;
+    --highlight-bg: #e2e8f0;
+    --box-border: #d9e2ec;
+}
+
+/* Tema Verde (Electrónica Digital) */
+body.tema-verde {
+    --bg-gradient-start: #003300;
+    --bg-gradient-end: #005900;
+    --title-accent: #b3ffb3;
+    --badge-bg: rgba(0, 223, 0, 0.15);
+    --badge-border: rgba(0, 223, 0, 0.4);
+    --slide-bg: #f4fbf4;
+    --header-text: #005900;
+    --header-border: #00df00;
+    --header-number: #669966;
+    --text-main: #1a331a;
+    --link-color: #008000;
+    --highlight-bg: #e6f9e6;
+    --box-border: #cceccc;
+}
+
+/* Tema Vinotinto (Información General / Encuadre) */
+body.tema-vinotinto {
+    --bg-gradient-start: #4a0e17;
+    --bg-gradient-end: #7a1625;
+    --title-accent: #e8d0a9;
+    --badge-bg: rgba(212, 175, 55, 0.15);
+    --badge-border: rgba(212, 175, 55, 0.4);
+    --slide-bg: #fcfbf9;
+    --header-text: #4a0e17;
+    --header-border: #d4af37;
+    --header-number: #8c7b65;
+    --text-main: #3b2a2a;
+    --link-color: #b8860b;
+    --highlight-bg: #fdf8ed;
+    --box-border: #e2e8f0;
+}
+
+/* =========================================
+   ESTILOS GENERALES Y ESTRUCTURA
+   ========================================= */
+body, html { margin: 0; padding: 0; width: 100%; height: 100%; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #1e1e1e; overflow: hidden; }
+.carousel { display: flex; width: 100vw; height: 100vh; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; }
+.carousel::-webkit-scrollbar { display: none; }
+.slide { flex: 0 0 100vw; height: 100vh; scroll-snap-align: start; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; }
+
+.title-slide { background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%); text-align: center; color: white; }
+.title-slide h1 { font-size: 3.8rem; margin-bottom: 0.2em; font-weight: 700; letter-spacing: -0.5px; padding: 0 20px;}
+.title-slide h2 { font-size: 2.2rem; font-weight: 300; margin-bottom: 1em; color: var(--title-accent); }
+.software-badge { font-size: 1.4rem; color: #ffffff; background: var(--badge-bg); padding: 10px 25px; border-radius: 50px; border: 1px solid var(--badge-border); display: inline-block; }
+
+.content-slide { background-color: var(--slide-bg); color: #333; }
+.slide-header { position: absolute; top: 0; left: 0; width: 100%; padding: 15px 30px; background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); font-size: 1.6rem; font-weight: 600; color: var(--header-text); display: flex; justify-content: space-between; align-items: center; box-sizing: border-box; border-bottom: 3px solid var(--header-border); }
+.slide-header .slide-number { font-size: 1.1rem; color: var(--header-number); font-weight: 500; }
+
+.text-container { margin-top: 70px; width: 85%; max-width: 1200px; height: calc(100vh - 150px); display: flex; flex-direction: column; justify-content: center; font-size: 1.4rem; line-height: 1.6; color: var(--text-main); overflow-y: auto; }
+.text-container p { margin-bottom: 15px; }
+.text-container ul, .text-container ol { margin-top: 10px; margin-bottom: 20px; padding-left: 40px; }
+.text-container li { margin-bottom: 12px; }
+.text-container strong { color: var(--header-text); }
+.text-container a { color: var(--link-color); text-decoration: none; font-weight: 600; }
+.text-container a:hover { text-decoration: underline; color: var(--header-text); }
+
+/* Soporte para imágenes (Para la de LTspice) */
+.image-container { margin-top: 70px; width: 90%; height: calc(100vh - 120px); display: flex; justify-content: center; align-items: center; }
+.image-container img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 8px 30px rgba(0,0,0,0.12); background: white; padding: 5px; border-radius: 4px; border: 1px solid var(--box-border); }
+
+.highlight-box { background-color: var(--highlight-bg); border-left: 5px solid var(--header-border); padding: 15px 20px; border-radius: 4px; margin-top: 20px; font-size: 1.25rem; }
+.activity-box { background-color: #ffffff; border: 1px solid var(--box-border); border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+.activity-box h3 { margin-top: 0; color: var(--header-text); font-size: 1.3rem; border-bottom: 2px solid var(--highlight-bg); padding-bottom: 8px; }
+
+.controls { position: fixed; bottom: 25px; right: 30px; display: flex; gap: 12px; z-index: 100; }
+.btn { background: var(--header-border); color: white; border: none; padding: 12px 24px; font-size: 1.1rem; font-weight: 500; border-radius: 6px; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.btn:hover { background: var(--header-text); transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+.instruction { position: absolute; bottom: 30px; width: 100%; text-align: center; color: rgba(255,255,255,0.6); font-size: 1rem; }
+
+/* =========================================
+   CONFIGURACIÓN PARA EXPORTAR A PDF
+   ========================================= */
+@media print {
+    @page { margin: 0; size: landscape; }
+    body, html { overflow: visible !important; height: auto !important; background: white; }
+    .carousel { display: block; overflow: visible; height: auto; }
+    .slide { height: 100vh; width: 100vw; page-break-after: always; page-break-inside: avoid; position: relative; align-items: flex-start; }
+    .text-container, .image-container { overflow: visible; height: auto; justify-content: flex-start; margin-top: 100px;}
+    .controls, .instruction, .carousel::-webkit-scrollbar { display: none !important; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}
+    </style>
+</head>
+<body>
+    <div class="carousel" id="slider">
+        <!-- Diapositiva 0: Título -->
+        <div class="slide title-slide" id="slide-0">
+            <h1>Información General</h1>
+            <h2>SENA - CMM 2026</h2>
+            <div class="software-badge">Instructor: Yerman Avila</div>
+            <div class="instruction">Navega usando las flechas del teclado (← / →) o los botones inferiores</div>
+        </div>
+
+        <!-- Diapositiva 1: Información de contacto -->
+        <div class="slide content-slide" id="slide-1">
+            <div class="slide-header">
+                <span>Información de Contacto</span>
+                <span class="slide-number">Diapositiva 1 de 4</span>
+            </div>
+            <div class="text-container">
+                <ul>
+                    <li><strong>Instructor:</strong> Yerman Avila</li>
+                    <li><strong>Correo:</strong> <a href="mailto:yavilag@sena.edu.co">yavilag@sena.edu.co</a></li>
+                    <li><strong>Whatsapp:</strong> <a href="https://wa.me/573204373427" target="_blank">+57 3204373427</a></li>
+                    <li><strong>Repositorio de información:</strong> <a href="https://sites.google.com/view/repositorio-2026/inicio" target="_blank">Enlace al Site</a></li>
+                </ul>
+                <div class="highlight-box">
+                    <strong>Nota:</strong> Las comunicaciones oficiales se realizan por correo institucional directamente. En caso de necesidad se dispone del número de whatsapp aclarando que no es un medio oficial de comunicación. Si los aprendices se ponen de acuerdo pueden crear un grupo para comunicación interna y agregar el contacto indicado anteriormente.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Diapositiva 2: Acuerdos Iniciales I -->
+        <div class="slide content-slide" id="slide-2">
+            <div class="slide-header">
+                <span>Acuerdos Iniciales - Asistencia e Ingreso</span>
+                <span class="slide-number">Diapositiva 2 de 4</span>
+            </div>
+            <div class="text-container">
+                <p>El acuerdo fundamental es el seguimiento estricto del <strong>Reglamento del aprendiz SENA</strong> el cual puede encontrar en el siguiente <a href="https://normograma.sena.edu.co/compilacion/docs/acuerdo_sena_0009_2024.htm" target="_blank">enlace normativo</a>.</p>
+                <p>Los demás acuerdos se plantean para una adecuada convivencia y buen desarrollo del proceso de aprendizaje:</p>
+                <ul>
+                    <li><strong>Puntualidad:</strong> hora en punto. Inicio de sesión +5 min.</li>
+                    <li><strong>Asistencia:</strong> controlada por firma.</li>
+                    <li><strong>Excusas:</strong> únicamente médicas o entrevista de contrato de aprendizaje con soporte de correo de citación.</li>
+                    <li><strong>Ingreso máximo:</strong>
+                        <ul>
+                            <li>Hora +15 min directamente.</li>
+                            <li>Hora +29 min a discreción del instructor.</li>
+                            <li>Hora +30 min no ingreso. Actividades de compromiso y mejora con formato firmado.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Diapositiva 3: Acuerdos Iniciales II -->
+        <div class="slide content-slide" id="slide-3">
+            <div class="slide-header">
+                <span>Acuerdos Iniciales - Comportamiento y EPPs</span>
+                <span class="slide-number">Diapositiva 3 de 4</span>
+            </div>
+            <div class="text-container" style="font-size: 1.25rem;">
+                <ul>
+                    <li><strong>Alimentos y bebidas:</strong> prohibido su consumo dentro del ambiente.</li>
+                    <li><strong>Celular:</strong> uso restringido. Únicamente permitido para actividades académicas.</li>
+                    <li><strong>Evidencias:</strong> Entregas en fecha y según acuerdo. Envíos tardíos únicamente con excusa médica.</li>
+                    <li><strong>Formatos debido proceso:</strong> Llamados de atención. Asistencia. Actividades de mejora.</li>
+                    <li><strong>Uso de EPPs:</strong> Uso completo de <em>overol</em>, botas y cofia según sea el caso. Uso de gafas, monogafas, guantes, careta y protector auditivo según la necesidad de la actividad.</li>
+                    <li><strong>Elementos adicionales:</strong> Prohibidos los piercings, aretes, manillas, relojes, collares, etc. Antes de ingresar al ambiente deben retirarse todos los elementos mencionados y portar el uniforme.</li>
+                    <li><strong>Actividades fuera del ambiente:</strong> Cambiarse, arreglarse cabello, usar lociones/perfumes, etc.</li>
+                    <li><strong>e-mail:</strong> Cada aprendiz debe activar su correo @soysena.edu.co o en su defecto tener activo un correo personal para comunicación constante.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Diapositiva 4: Evidencias -->
+        <div class="slide content-slide" id="slide-4">
+            <div class="slide-header">
+                <span>Gestión de Evidencias</span>
+                <span class="slide-number">Diapositiva 4 de 4</span>
+            </div>
+            <div class="text-container">
+                <p>En el trimestre hay <strong>3 actividades principales</strong> para las cuales cada aprendiz deberá subir su evidencia en el siguiente enlace:</p>
+                <p>👉 <a href="https://forms.gle/YAk2QcsWfAta9m8E8" target="_blank">Formulario de Entrega de Evidencias</a></p>
+                
+                <ul>
+                    <li>En caso de tener varios archivos deberá comprimirlos en un <strong>.zip</strong> o <strong>.rar</strong> para adjuntarlos.</li>
+                    <li>Incluso si el trabajo es en grupo, <strong>cada aprendiz es responsable</strong> de subir su evidencia de manera individual.</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    Además de las evidencias principales existen evidencias parciales de apoyo al proceso formativo teniendo en cuenta que estas pueden ser de: <strong>conocimiento, desempeño o producto</strong>.
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Controles de navegación -->
+    <div class="controls">
+        <button class="btn" onclick="moveSlide(-1)">❮ Anterior</button>
+        <button class="btn" onclick="moveSlide(1)">Siguiente ❯</button>
+    </div>
+
+    <script>
+        // Automatizar el conteo de diapositivas
+        const contentSlides = document.querySelectorAll('.content-slide');
+        const totalImages = contentSlides.length;
+        
+        contentSlides.forEach((slide, index) => {
+            const numberSpan = slide.querySelector('.slide-number');
+            if (numberSpan) {
+                numberSpan.textContent = `Diapositiva ${index + 1} de ${totalImages}`;
+            }
+        });
+
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.slide').length;
+        
+        function moveSlide(direction) {
+            currentSlide += direction;
+            
+            // Límites
+            if (currentSlide < 0) currentSlide = 0;
+            if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+            
+            // Desplazamiento suave
+            document.getElementById('slide-' + currentSlide).scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'start'
+            });
+        }
+
+        // Soporte para teclado (Flechas y Espacio)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                moveSlide(1);
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                moveSlide(-1);
+            }
+        });
+        
+        // Actualizar currentSlide si el usuario hace scroll manual con el trackpad
+        document.getElementById('slider').addEventListener('scrollend', (e) => {
+            const scrollLeft = e.target.scrollLeft;
+            const slideWidth = window.innerWidth;
+            currentSlide = Math.round(scrollLeft / slideWidth);
+        });
+    </script>
+
+
+</body></html>
